@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disney Princess Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e6b3cc;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #cc99ff;
+        }
+        #result {
+            display: none;
+            text-align: center;
+        }
+        h1 {
+            color: #ff66b2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Which Disney Princess Are You?</h1>
+        <div id="quiz">
+            <div class="question active" id="q1">
+                <h3>What's your ideal way to spend a free day?</h3>
+                <div class="options">
+                    <button onclick="answer(1, 'A')">Reading and learning new things</button>
+                    <button onclick="answer(1, 'B')">Exploring and adventuring</button>
+                    <button onclick="answer(1, 'C')">Singing and dancing</button>
+                    <button onclick="answer(1, 'D')">Helping others</button>
+                </div>
+            </div>
+
+            <div class="question" id="q2">
+                <h3>What's your best quality?</h3>
+                <div class="options">
+                    <button onclick="answer(2, 'A')">Intelligence</button>
+                    <button onclick="answer(2, 'B')">Bravery</button>
+                    <button onclick="answer(2, 'C')">Creativity</button>
+                    <button onclick="answer(2, 'D')">Kindness</button>
+                </div>
+            </div>
+
+            <div class="question" id="q3">
+                <h3>Pick a dream pet:</h3>
+                <div class="options">
+                    <button onclick="answer(3, 'A')">Horse</button>
+                    <button onclick="answer(3, 'B')">Dragon</button>
+                    <button onclick="answer(3, 'C')">Cat</button>
+                    <button onclick="answer(3, 'D')">Raccoon</button>
+                </div>
+            </div>
+
+            <div class="question" id="q4">
+                <h3>What's your biggest dream?</h3>
+                <div class="options">
+                    <button onclick="answer(4, 'A')">Finding true love</button>
+                    <button onclick="answer(4, 'B')">Going on adventures</button>
+                    <button onclick="answer(4, 'C')">Making a difference in the world</button>
+                    <button onclick="answer(4, 'D')">Finding your true self</button>
+                </div>
+            </div>
+
+            <div class="question" id="q5">
+                <h3>Choose a power:</h3>
+                <div class="options">
+                    <button onclick="answer(5, 'A')">Magic</button>
+                    <button onclick="answer(5, 'B')">Super strength</button>
+                    <button onclick="answer(5, 'C')">Ability to talk to animals</button>
+                    <button onclick="answer(5, 'D')">Healing powers</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result">
+            <h2>You are: <span id="princess-name"></span>!</h2>
+            <p id="princess-description"></p>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
